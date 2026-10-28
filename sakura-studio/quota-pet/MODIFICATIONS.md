@@ -1,0 +1,4 @@
+# 樱色整合版
+Based on T7moris/GPT-Niang v1.3.4, commit b92159a93c131bd5ba4722d7f507ee04d633d5db (MIT code).
+Changed bust sprite, bubble palette and default quotes; desktop mode and muted sound by default. Configuration and snapshots live under the parent tool state/quota-pet directory. Parent controls lifecycle using per-launch ready/stop files. Upstream installer, login startup tasks and MCP registration are not run. Upstream updater is disabled to protect customized assets; updates are managed by Sakura Studio. 0.3.1 restores upstream host-follow mode and saved mode preferences. Only the Girl image is locally mirrored to correct new artwork facing; bubble and text direction remain unchanged.
+New sprite generated with built-in ImageGen from the user's theme reference and upstream chibi proportion reference. Existing character/reference rights remain with their respective owners. The new sprite is not covered by the code MIT license.

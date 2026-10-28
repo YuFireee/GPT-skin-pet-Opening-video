@@ -1,0 +1,11 @@
+{
+  "source": "AIT20261021183513PCA2LVQD.mp4",
+  "sha256": "a5bf1070b01764b8859ce48277faddfad52bf7ef18a41f01113fa66eba77d5ae",
+  "width": 1344,
+  "height": 768,
+  "fps": 24,
+  "seconds": 9.425,
+  "codec": "H264/AAC",
+  "copiedWithoutReencoding": true,
+  "playbackPolicy": "No upscaling beyond native pixel size during movie; smooth1.6s expansion after movie to current source client bounds"
+}

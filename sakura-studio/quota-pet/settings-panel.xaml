@@ -1,0 +1,39 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="510" Height="640" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" FontFamily="Microsoft YaHei UI" FontSize="13" Foreground="#584762">
+ <Window.Resources>
+  <Style TargetType="TabItem"><Setter Property="FontSize" Value="12"/><Setter Property="Foreground" Value="#967D9F"/><Setter Property="Background" Value="Transparent"/><Setter Property="Template"><Setter.Value><ControlTemplate TargetType="TabItem"><Border x:Name="TabBody" Background="{TemplateBinding Background}" CornerRadius="10" Padding="12,9" Margin="0,0,3,0"><ContentPresenter ContentSource="Header"/></Border><ControlTemplate.Triggers><Trigger Property="IsSelected" Value="True"><Setter Property="Background" Value="#EAE0F2"/><Setter Property="Foreground" Value="#624570"/></Trigger><Trigger Property="IsMouseOver" Value="True"><Setter TargetName="TabBody" Property="Background" Value="#F1E9F6"/></Trigger></ControlTemplate.Triggers></ControlTemplate></Setter.Value></Setter></Style>
+  <Style TargetType="TabControl"><Setter Property="Template"><Setter.Value><ControlTemplate TargetType="TabControl"><Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition/></Grid.RowDefinitions><TabPanel IsItemsHost="True" Margin="0,0,0,16"/><ContentPresenter Grid.Row="1" ContentSource="SelectedContent"/></Grid></ControlTemplate></Setter.Value></Setter></Style>
+
+  <Style TargetType="Button"><Setter Property="Background" Value="#EDE2F2"/><Setter Property="Foreground" Value="#695078"/><Setter Property="Margin" Value="0,5,6,5"/><Setter Property="Padding" Value="12,8"/><Setter Property="BorderThickness" Value="0"/><Setter Property="Cursor" Value="Hand"/><Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Button"><Border Background="{TemplateBinding Background}" CornerRadius="10" Padding="{TemplateBinding Padding}"><ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/></Border></ControlTemplate></Setter.Value></Setter></Style>
+  <Style TargetType="CheckBox"><Setter Property="Margin" Value="0,10,0,6"/></Style>
+  <Style TargetType="TextBox"><Setter Property="Padding" Value="7"/><Setter Property="Margin" Value="0,4,0,6"/><Setter Property="Background" Value="#FFFDFF"/><Setter Property="BorderBrush" Value="#DFD2E7"/><Setter Property="Template"><Setter.Value><ControlTemplate TargetType="TextBox"><Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="8" Padding="{TemplateBinding Padding}"><ScrollViewer x:Name="PART_ContentHost"/></Border></ControlTemplate></Setter.Value></Setter></Style>
+  <Style TargetType="ComboBox"><Setter Property="Padding" Value="10,8"/><Setter Property="Margin" Value="0,4,0,6"/><Setter Property="Template"><Setter.Value><ControlTemplate TargetType="ComboBox"><Grid>
+   <ToggleButton Focusable="False" IsChecked="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"><ToggleButton.Template><ControlTemplate TargetType="ToggleButton"><Border Background="#F0E8F6" CornerRadius="10" Padding="10,8"><TextBlock Text="⌄" HorizontalAlignment="Right" Foreground="#9A7FA7"/></Border></ControlTemplate></ToggleButton.Template></ToggleButton>
+   <ContentPresenter Content="{TemplateBinding SelectionBoxItem}" ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" IsHitTestVisible="False" VerticalAlignment="Center" Margin="10,0,26,0"/>
+   <Popup x:Name="PART_Popup" Placement="Bottom" IsOpen="{TemplateBinding IsDropDownOpen}" AllowsTransparency="True"><Border Background="#FCF9FF" BorderBrush="#E0D3E8" BorderThickness="1" CornerRadius="10" Padding="6" MinWidth="{Binding ActualWidth, RelativeSource={RelativeSource TemplatedParent}}"><ScrollViewer MaxHeight="230"><ItemsPresenter/></ScrollViewer></Border></Popup>
+  </Grid></ControlTemplate></Setter.Value></Setter></Style>
+ </Window.Resources>
+ <Border Background="#FCF9FF" BorderBrush="#E2D7EA" BorderThickness="1" CornerRadius="22" Padding="20">
+ <Grid><Grid.RowDefinitions><RowDefinition Height="42"/><RowDefinition/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+  <Grid x:Name="SettingsHeader"><TextBlock Text="桌宠设置" FontSize="22" FontWeight="SemiBold"/><Button x:Name="CloseSettings" Content="×" Width="30" Padding="0" HorizontalAlignment="Right" Margin="0,0,0,8"/></Grid>
+  <TabControl x:Name="SettingsTabs" Grid.Row="1" Background="Transparent" BorderThickness="0" Padding="0,12,0,0">
+   <TabItem Header="显示与声音"><ScrollViewer VerticalScrollBarVisibility="Auto"><StackPanel>
+    <TextBlock Text="显示位置" FontWeight="SemiBold"/><ComboBox x:Name="SettingsFollow"><ComboBoxItem Content="桌面自由拖动"/><ComboBoxItem Content="仅跟随主窗口"/></ComboBox>
+    <CheckBox x:Name="SettingsTopmost" Content="始终置顶（桌面模式）"/>
+    <CheckBox x:Name="SettingsIdle" Content="角色动画：常态、执行与待确认（柔光格裙）"/>
+    <TextBlock Text="桌宠大小" Margin="0,12,0,4"/><Slider x:Name="SettingsScale" Minimum="0.6" Maximum="2.5" TickFrequency="0.1" IsSnapToTickEnabled="True"/>
+    <CheckBox x:Name="SettingsSound" Content="点击音效"/><TextBlock Text="音量"/><Slider x:Name="SettingsVolume" Minimum="0" Maximum="1" TickFrequency="0.05"/>
+    <TextBlock Text="配色" Margin="0,16,0,0"/><ComboBox x:Name="SettingsColor"><ComboBoxItem Content="保持原色"/><ComboBoxItem Content="随台词变色"/><ComboBoxItem Content="持续彩虹"/><ComboBoxItem Content="独立随机"/></ComboBox>
+    <CheckBox x:Name="SettingsColorPaused" Content="暂停颜色流动"/>
+   </StackPanel></ScrollViewer></TabItem>
+   <TabItem Header="提醒与公告"><ScrollViewer VerticalScrollBarVisibility="Auto"><StackPanel>
+    <CheckBox x:Name="SettingsAlerts" Content="启用账户额度提醒"/><TextBlock Text="低额度提醒阈值"/><ComboBox x:Name="SettingsThreshold"><ComboBoxItem Content="10%"/><ComboBoxItem Content="20%"/><ComboBoxItem Content="30%"/></ComboBox>
+    <CheckBox x:Name="SettingsAnnouncements" Content="读取第三方额外重置公告（半小时缓存）"/>
+    <Border Background="#F1EAF7" CornerRadius="12" Padding="12" Margin="0,10,0,0"><StackPanel><TextBlock Text="第三方公告 · 与账户实际恢复分开" FontWeight="SemiBold"/><TextBlock x:Name="SettingsAnnouncementText" TextWrapping="Wrap" Margin="0,8,0,8"/><Button x:Name="SettingsAnnouncementSource" Content="来源：Codex Resets ↗" HorizontalAlignment="Left"/></StackPanel></Border>
+   </StackPanel></ScrollViewer></TabItem>
+   <TabItem Header="快捷按钮"><ScrollViewer VerticalScrollBarVisibility="Auto"><StackPanel><TextBlock Text="额度卡片底部最多显示三个快捷按钮。" TextWrapping="Wrap"/><TextBlock Text="选择本地功能，或填写 HTTPS 网站；保存不会打开网站。" FontSize="11" Foreground="#9A849F" Margin="0,5,0,12" TextWrapping="Wrap"/><StackPanel x:Name="SettingsShortcutRows"/></StackPanel></ScrollViewer></TabItem>
+   <TabItem Header="连接诊断"><ScrollViewer VerticalScrollBarVisibility="Auto"><StackPanel><TextBlock Text="仅读取本地状态，不启动或重复调用主应用。" TextWrapping="Wrap" Margin="0,0,0,12"/><TextBlock x:Name="SettingsDiagnostics" TextWrapping="Wrap" LineHeight="25"/><Button x:Name="RefreshDiagnostics" Content="重新检查状态" HorizontalAlignment="Left"/><Button x:Name="OpenLocalReport" Content="打开 Token 日报" HorizontalAlignment="Left"/></StackPanel></ScrollViewer></TabItem>
+  </TabControl>
+  <TextBlock x:Name="SettingsFeedback" Grid.Row="2" TextWrapping="Wrap" Foreground="#A27391" Margin="0,10,0,4"/>
+  <Button x:Name="SaveUnifiedSettings" Grid.Row="3" Content="保存设置" HorizontalAlignment="Right" Width="120"/>
+ </Grid></Border>
+</Window>

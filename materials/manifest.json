@@ -1,0 +1,826 @@
+{
+  "schema": 1,
+  "distribution": "public-code-only",
+  "entries": [
+    {
+      "source": "theme/launcher.ico",
+      "target": "assets/launcher.ico",
+      "bytes": 766,
+      "sha256": "71f466497067c70fe6652ceefadb7bf161ed4e095bf358377cfcaef005d57727",
+      "bundled": false
+    },
+    {
+      "source": "theme/LICENSE.txt",
+      "target": "assets/LICENSE.txt",
+      "bytes": 277,
+      "sha256": "d00ca2ddf99fb0b9c05b8958077a204473d6a8acfdde6af72fe7ca1858ba8f32",
+      "bundled": false
+    },
+    {
+      "source": "theme/sakura-calm-soft-portrait.png",
+      "target": "assets/sakura-calm-soft-portrait.png",
+      "bytes": 6660209,
+      "sha256": "a885edde98c787fa7e3262e5c9cfaa3251aa83be4f55a0fe119fdd2a7c375a53",
+      "bundled": false
+    },
+    {
+      "source": "theme/sakura-opening.end.png",
+      "target": "assets/sakura-opening.end.png",
+      "bytes": 940897,
+      "sha256": "48988ba30a86c5908e8712c73ac8161fffb1f8ed9a6bd86a086a384c36d9ed95",
+      "bundled": false
+    },
+    {
+      "source": "theme/sakura-opening.mp4",
+      "target": "assets/sakura-opening.mp4",
+      "bytes": 9092716,
+      "sha256": "a5bf1070b01764b8859ce48277faddfad52bf7ef18a41f01113fa66eba77d5ae",
+      "bundled": false
+    },
+    {
+      "source": "theme/sakura-opening.poster.png",
+      "target": "assets/sakura-opening.poster.png",
+      "bytes": 1426770,
+      "sha256": "c0586d505c7968a419c1fb7ef9bea8f275bb4c3ba37a5cf3015290468e62d2fd",
+      "bundled": false
+    },
+    {
+      "source": "pet/CHARACTER-NOTICE.txt",
+      "target": "quota-pet/assets/CHARACTER-NOTICE.txt",
+      "bytes": 1959,
+      "sha256": "cf3efa5dd79c0f21479f4789de6c6f5aeed2ba1a47c7cf3d357916e75123d2a7",
+      "bundled": false
+    },
+    {
+      "source": "pet/gpt-dragon-niang-bust.png",
+      "target": "quota-pet/assets/gpt-dragon-niang-bust.png",
+      "bytes": 1741354,
+      "sha256": "7787b108d9c972d06228acf4c41721217ae88489b79dc116e2a78d4f81767204",
+      "bundled": false
+    },
+    {
+      "source": "pet/press.wav",
+      "target": "quota-pet/assets/press.wav",
+      "bytes": 11510,
+      "sha256": "10f802ff0f6d8327fee9c795d9f5672afe5bcc8660fc593a3e72ce99324f0053",
+      "bundled": false
+    },
+    {
+      "source": "pet/quote-layouts.json",
+      "target": "quota-pet/assets/quote-layouts.json",
+      "bytes": 6698,
+      "sha256": "6453f543244e531246fd6ad6dae68ab4cac343a562d09e3e98d3962c173308d7",
+      "bundled": false
+    },
+    {
+      "source": "pet/quotes-LICENSE.txt",
+      "target": "quota-pet/assets/quotes-LICENSE.txt",
+      "bytes": 1779,
+      "sha256": "81f8e006380d32d772cf4f605616cea114170b5cd4c57f84ae8204160666ac3e",
+      "bundled": false
+    },
+    {
+      "source": "pet/quotes.json",
+      "target": "quota-pet/assets/quotes.json",
+      "bytes": 145,
+      "sha256": "d1eadb2a26819fd4dea4b17aff6a82465ffbc97072b85a2002829b38302e247f",
+      "bundled": false
+    },
+    {
+      "source": "pet/release.wav",
+      "target": "quota-pet/assets/release.wav",
+      "bytes": 14156,
+      "sha256": "f743d9b0b4e6d1576ca2329707788d0f35acb3763adb7c48c42f9b31e37c2064",
+      "bundled": false
+    },
+    {
+      "source": "pet/SAKURA-ASSET.md",
+      "target": "quota-pet/assets/SAKURA-ASSET.md",
+      "bytes": 1179,
+      "sha256": "f3f683fbcf64716fbc6901de541adef3cb94819b46ded16ece4b910e7f6dfde7",
+      "bundled": false
+    },
+    {
+      "source": "pet/sakura-soft-bust.png",
+      "target": "quota-pet/assets/sakura-soft-bust.png",
+      "bytes": 1626673,
+      "sha256": "419cd1405ea7e9e1e601ef4d16f7762a9021c161dc2e940d2a76ceee4fe004e6",
+      "bundled": false
+    },
+    {
+      "source": "pet/生成说明.md",
+      "target": "quota-pet/assets/生成说明.md",
+      "bytes": 1923,
+      "sha256": "1c4f091c78df8993239fef4590bf28128808918ef33e05c9afc4898acf9afd04",
+      "bundled": false
+    },
+    {
+      "source": "pet/upstream-preview.png",
+      "target": "quota-pet/preview.png",
+      "bytes": 81643,
+      "sha256": "d60dc415bc72ff988ff75dbe936528f73580c1a3e107952f2b03c12d1198954c",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frame-durations.txt",
+      "target": "quota-pet/assets/idle-soft/frame-durations.txt",
+      "bytes": 132,
+      "sha256": "ee081b926daa774c520f6894a3141f5d0ea0463d1882af3ae29cedd5c22ed348",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/000.png",
+      "target": "quota-pet/assets/idle-soft/frames/000.png",
+      "bytes": 381014,
+      "sha256": "dd1d6417ae493a17064b40b602489ee084581f442147f3ed904b1bb3b8fa33c7",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/001.png",
+      "target": "quota-pet/assets/idle-soft/frames/001.png",
+      "bytes": 381008,
+      "sha256": "a45d2d7e3593f9f68575a51aade11fdddc4a648b9b69ac8c7e6040838b385fa2",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/002.png",
+      "target": "quota-pet/assets/idle-soft/frames/002.png",
+      "bytes": 381060,
+      "sha256": "3205606a0d0c77d8fd68c7ac15153c427353e246d168df89a8c1604268846bec",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/003.png",
+      "target": "quota-pet/assets/idle-soft/frames/003.png",
+      "bytes": 380812,
+      "sha256": "c8baabe40179288ddcb45f84bf82510e3f754c37fc8242b2fa0354daaa016d98",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/004.png",
+      "target": "quota-pet/assets/idle-soft/frames/004.png",
+      "bytes": 380635,
+      "sha256": "ba28557fff762fd574819e281162e68e4d25ade2128b1b2c693c87f6c9d5a192",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/005.png",
+      "target": "quota-pet/assets/idle-soft/frames/005.png",
+      "bytes": 380973,
+      "sha256": "5571b07ef532e92f89dafc356321bb25cc9d936e992d7d0eff7c4563a733318a",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/006.png",
+      "target": "quota-pet/assets/idle-soft/frames/006.png",
+      "bytes": 380688,
+      "sha256": "0d575a4edb26c4183651dc82344c748787b11ea603f46991de5983e59fecfa01",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/007.png",
+      "target": "quota-pet/assets/idle-soft/frames/007.png",
+      "bytes": 380829,
+      "sha256": "82b342cc3076729ea1078cc153dd3332dd565356a71d9deb2b8319118b2bd96b",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/008.png",
+      "target": "quota-pet/assets/idle-soft/frames/008.png",
+      "bytes": 381119,
+      "sha256": "d20face2b0283bb393a2ba63675dfb0037c1fddcfea4c00e6dc2d860a69328b5",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/009.png",
+      "target": "quota-pet/assets/idle-soft/frames/009.png",
+      "bytes": 381845,
+      "sha256": "291d04b08b739509636a011fb219b1f5ccc879adbd6f54eade97d88e16ed0a89",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/010.png",
+      "target": "quota-pet/assets/idle-soft/frames/010.png",
+      "bytes": 381370,
+      "sha256": "0eec031079b08c3e0fc77988dca59db75492b2120e46789fce3d24a6d7e95a42",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/011.png",
+      "target": "quota-pet/assets/idle-soft/frames/011.png",
+      "bytes": 381365,
+      "sha256": "ec0f109dd7df21176620e52db9f1280edef7876a0fc0fd557023ac09a6580642",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/012.png",
+      "target": "quota-pet/assets/idle-soft/frames/012.png",
+      "bytes": 380521,
+      "sha256": "dfee2ecd9a11dc962e05fd56a4d24930ab6764cf9c594e4ca35c9edab219863a",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/013.png",
+      "target": "quota-pet/assets/idle-soft/frames/013.png",
+      "bytes": 380418,
+      "sha256": "3c21e375dfc250c5652c55c9fd203fbbaa319f1a394f5a2e4080548d1cf3edec",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/014.png",
+      "target": "quota-pet/assets/idle-soft/frames/014.png",
+      "bytes": 380434,
+      "sha256": "df177347af81ba36f00d905dc83becab8f053865e467e6162c3241dc20a37795",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/015.png",
+      "target": "quota-pet/assets/idle-soft/frames/015.png",
+      "bytes": 380490,
+      "sha256": "12fa6c5d893c02d37afa3b16f704e4471c93a72734ab3c9e6ebe5b0d46665899",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/016.png",
+      "target": "quota-pet/assets/idle-soft/frames/016.png",
+      "bytes": 380288,
+      "sha256": "c95341d6a5e9565afdcfaa3f3a7fe0239352aed62f4d4df41078e38d72e12e85",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/017.png",
+      "target": "quota-pet/assets/idle-soft/frames/017.png",
+      "bytes": 380390,
+      "sha256": "4f1513145d4b5b52b49c89014c2c8d8db03f743e384cbd24cdfd20d30a9d61e0",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/018.png",
+      "target": "quota-pet/assets/idle-soft/frames/018.png",
+      "bytes": 379114,
+      "sha256": "dd94ea15d361886b330f790ed72d49f977bfa46e59386d8f26ee6584c1b925f6",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/019.png",
+      "target": "quota-pet/assets/idle-soft/frames/019.png",
+      "bytes": 371855,
+      "sha256": "7e954bae93b0c86939926d20fedd1736431fc4b39af6b93a58d6d6ce9c13aec3",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/020.png",
+      "target": "quota-pet/assets/idle-soft/frames/020.png",
+      "bytes": 379114,
+      "sha256": "dd94ea15d361886b330f790ed72d49f977bfa46e59386d8f26ee6584c1b925f6",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/021.png",
+      "target": "quota-pet/assets/idle-soft/frames/021.png",
+      "bytes": 380077,
+      "sha256": "954c1cdf8e2765b374091a48cc1fce2c3b754840664950ad413d7927d490f7f6",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/022.png",
+      "target": "quota-pet/assets/idle-soft/frames/022.png",
+      "bytes": 380297,
+      "sha256": "9a8b7aabd103c7e518cd6829377c577b9ef20acbd5f48fb863b7f0cfe751e0e6",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/023.png",
+      "target": "quota-pet/assets/idle-soft/frames/023.png",
+      "bytes": 380437,
+      "sha256": "73f44f4b56258eca32996248e04eaf579a71eab3191cef028e6f1a2c13e95fde",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/024.png",
+      "target": "quota-pet/assets/idle-soft/frames/024.png",
+      "bytes": 381406,
+      "sha256": "3ea622a81918b518a08890449590bc7362def2101e54ad324b1de815170b26d5",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/025.png",
+      "target": "quota-pet/assets/idle-soft/frames/025.png",
+      "bytes": 381390,
+      "sha256": "1848cd19264a239d97cf1dd2ffa26449a342f39e14d0ccdaf5b1c5593cb6b992",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-idle-v1/frames/026.png",
+      "target": "quota-pet/assets/idle-soft/frames/026.png",
+      "bytes": 381764,
+      "sha256": "aa37880174e2074b68034c450877ffd22f0bc9d2db48a96efdde4aff1f4424ce",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frame-durations.txt",
+      "target": "quota-pet/assets/executing-soft/frame-durations.txt",
+      "bytes": 212,
+      "sha256": "a5aaaf1a1dab37d6160f3d9fc554dacf5536da0c7743120070dfc25594660a31",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/000.png",
+      "target": "quota-pet/assets/executing-soft/frames/000.png",
+      "bytes": 380938,
+      "sha256": "e5c735e067a66fe64dcfe479fafd2bd399b3d1cd20f34595697a2f3386cb0490",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/001.png",
+      "target": "quota-pet/assets/executing-soft/frames/001.png",
+      "bytes": 379395,
+      "sha256": "e4ccf534002e12e156c913d24d6c6849f6b6c2368d4c1c03bea596e5ae034c48",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/002.png",
+      "target": "quota-pet/assets/executing-soft/frames/002.png",
+      "bytes": 378599,
+      "sha256": "b0cf654720bad10e2a68017d5951c0808d4d88300f6d12f70b6c722fcb40a03d",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/003.png",
+      "target": "quota-pet/assets/executing-soft/frames/003.png",
+      "bytes": 376425,
+      "sha256": "4080aafce0d4017deffcf6bb7a16ee24da09bdba49697c9165d76c2096589342",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/004.png",
+      "target": "quota-pet/assets/executing-soft/frames/004.png",
+      "bytes": 373785,
+      "sha256": "06b84887b5a88f111266b68913a1aecd3f1d433ea373b02b89eda045f58130a0",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/005.png",
+      "target": "quota-pet/assets/executing-soft/frames/005.png",
+      "bytes": 372858,
+      "sha256": "32c8c6b88d7f22805b50a839213be606deaf8da6f9f0447772f2d06b20ae0e0b",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/006.png",
+      "target": "quota-pet/assets/executing-soft/frames/006.png",
+      "bytes": 372916,
+      "sha256": "9a43e122739c4e1baa0f815df7d7b95bacdc3869c618f57535d70deed5245574",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/007.png",
+      "target": "quota-pet/assets/executing-soft/frames/007.png",
+      "bytes": 372927,
+      "sha256": "eca434e6c099b111e6986278a0f94c0df1e27dee84aad071764cd4966aafa330",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/008.png",
+      "target": "quota-pet/assets/executing-soft/frames/008.png",
+      "bytes": 372945,
+      "sha256": "9420ef0f9e640a3bd257b0719a2ade428fbb238736146573c63edef06cf9b06c",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/009.png",
+      "target": "quota-pet/assets/executing-soft/frames/009.png",
+      "bytes": 373295,
+      "sha256": "1db893963492bc0f21c3fbb0d609908d8e7b3c17e5d81ddc85dbc2426d830ac4",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/010.png",
+      "target": "quota-pet/assets/executing-soft/frames/010.png",
+      "bytes": 374835,
+      "sha256": "f79a5af4996f0cb388c6ae8e4a7693f05e252de34af45ddf59b79f7a13d25cef",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/011.png",
+      "target": "quota-pet/assets/executing-soft/frames/011.png",
+      "bytes": 377497,
+      "sha256": "8e34fbef2eac70c247044326dd1ddb0653d6440a5381f41d8d27753724127678",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/012.png",
+      "target": "quota-pet/assets/executing-soft/frames/012.png",
+      "bytes": 379951,
+      "sha256": "8dac3b5e72c5ac79b01128e2ed9409a99f2568647e33554aee5e152a6cadb256",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/013.png",
+      "target": "quota-pet/assets/executing-soft/frames/013.png",
+      "bytes": 381251,
+      "sha256": "1e1a74e03cf36ef74268bfdb3fc2fc0c633b74521f2e34a6440120063322c404",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/014.png",
+      "target": "quota-pet/assets/executing-soft/frames/014.png",
+      "bytes": 382007,
+      "sha256": "43158845135fa2d90180ca55d816bee44b9192a6382f58dded6919f5e34e1c93",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/015.png",
+      "target": "quota-pet/assets/executing-soft/frames/015.png",
+      "bytes": 380159,
+      "sha256": "1d55144bf86818c4ade4575e227af6dcb30f84f8b9e71fd5c0c837ec6a1778e1",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/016.png",
+      "target": "quota-pet/assets/executing-soft/frames/016.png",
+      "bytes": 378634,
+      "sha256": "1465e562cbeae9f13ffd0e92420e7f63c38f9c8bffd098aab3597691437c2a0b",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/017.png",
+      "target": "quota-pet/assets/executing-soft/frames/017.png",
+      "bytes": 377907,
+      "sha256": "a02ca430e57d2a6558bd80f443bafb4a56af9a80d6d3406a1ef2e6fcc3833eb7",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/018.png",
+      "target": "quota-pet/assets/executing-soft/frames/018.png",
+      "bytes": 377830,
+      "sha256": "2a6618e616d5272d28a3c9aaca651506c7730d1a0e81b28ffda88a283f8b7ef2",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/019.png",
+      "target": "quota-pet/assets/executing-soft/frames/019.png",
+      "bytes": 377833,
+      "sha256": "c4b8711ffd769987041eb2986b365a7b4f0028175c87e76b64f269076da2239c",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/020.png",
+      "target": "quota-pet/assets/executing-soft/frames/020.png",
+      "bytes": 377564,
+      "sha256": "950affb68975adc1479648baa778c566cf3633d6bbc330e8b0abe16b21511c25",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/021.png",
+      "target": "quota-pet/assets/executing-soft/frames/021.png",
+      "bytes": 377457,
+      "sha256": "559c6ba4f27752b9f80fdd1f755e3587cc5edfc767909b062562d0f5a0e384d5",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/022.png",
+      "target": "quota-pet/assets/executing-soft/frames/022.png",
+      "bytes": 378352,
+      "sha256": "4cf170c7a04d09d08bc32b02d8412acabb66491cac4036595d0bbc9c884c0f4a",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/023.png",
+      "target": "quota-pet/assets/executing-soft/frames/023.png",
+      "bytes": 378384,
+      "sha256": "2abeb3242cd52dded8d43acdbf377466262831a93b89f08c6fc4c39c13606cf5",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/024.png",
+      "target": "quota-pet/assets/executing-soft/frames/024.png",
+      "bytes": 376619,
+      "sha256": "4b7dbf8863a249107c43558f6a2eea9345cacbf30841a98b01ee92a77f6ab673",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/025.png",
+      "target": "quota-pet/assets/executing-soft/frames/025.png",
+      "bytes": 377146,
+      "sha256": "11dfa762e4d75b0549ff8e7e70a59f2dca1a9c32591fb6b95baae4a7998f4eed",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/026.png",
+      "target": "quota-pet/assets/executing-soft/frames/026.png",
+      "bytes": 377048,
+      "sha256": "585ad9e294d3712f4ae6c0828320b0641bf00e169bdac1ae2393d43f8613d4c6",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/027.png",
+      "target": "quota-pet/assets/executing-soft/frames/027.png",
+      "bytes": 377292,
+      "sha256": "7a5294bb1666e156433d0aa01279845f7b3e21e4d8a53a0bdac1e3a596c6273d",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/028.png",
+      "target": "quota-pet/assets/executing-soft/frames/028.png",
+      "bytes": 378022,
+      "sha256": "26c022acf55edd4eb379c67fd09d258ee14df233da34b0546e68ab44ad969171",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/029.png",
+      "target": "quota-pet/assets/executing-soft/frames/029.png",
+      "bytes": 368627,
+      "sha256": "55736537788c5f989b3fb00f33b4d1384a47c8151736e49b39c6397171289b9c",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/030.png",
+      "target": "quota-pet/assets/executing-soft/frames/030.png",
+      "bytes": 368627,
+      "sha256": "55736537788c5f989b3fb00f33b4d1384a47c8151736e49b39c6397171289b9c",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/031.png",
+      "target": "quota-pet/assets/executing-soft/frames/031.png",
+      "bytes": 368627,
+      "sha256": "55736537788c5f989b3fb00f33b4d1384a47c8151736e49b39c6397171289b9c",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/032.png",
+      "target": "quota-pet/assets/executing-soft/frames/032.png",
+      "bytes": 378779,
+      "sha256": "3015015978de9e7a1467fa4e585d4b5ace19a715c67e65922ceea30288424b44",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/033.png",
+      "target": "quota-pet/assets/executing-soft/frames/033.png",
+      "bytes": 380866,
+      "sha256": "958287c2ec8a2f0f2344bd19a9b1bb79cd0cbb4168840b15b5572235d7b0b292",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/034.png",
+      "target": "quota-pet/assets/executing-soft/frames/034.png",
+      "bytes": 380593,
+      "sha256": "7ae175e71bd32a5a3e6968156633cba65ca91de0a2e2a2c84a060df11b58180f",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/035.png",
+      "target": "quota-pet/assets/executing-soft/frames/035.png",
+      "bytes": 381031,
+      "sha256": "1be0f07bddafc274db15b004a0dae78018edfd732c1f8bf786a445ccbfd72cf1",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/036.png",
+      "target": "quota-pet/assets/executing-soft/frames/036.png",
+      "bytes": 380734,
+      "sha256": "e1e377fa4debb1203f99b7b982ae9fd6aecb1ac0615470343784771b14b0bdb8",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/037.png",
+      "target": "quota-pet/assets/executing-soft/frames/037.png",
+      "bytes": 380731,
+      "sha256": "04ea794721cf012c8cc89c7a8e0c7d75502be47f0b42a8011e7939a51769ab24",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/038.png",
+      "target": "quota-pet/assets/executing-soft/frames/038.png",
+      "bytes": 379280,
+      "sha256": "16d1f83a8a82abb61152d65a3c720f80df0ef35a90d4712cffbe9d0e9d7b6e7c",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/039.png",
+      "target": "quota-pet/assets/executing-soft/frames/039.png",
+      "bytes": 381059,
+      "sha256": "ba49f88fa1e2222b288655fd7c9f182444849a8177af9da5b2d2ac7482a76f25",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/040.png",
+      "target": "quota-pet/assets/executing-soft/frames/040.png",
+      "bytes": 381354,
+      "sha256": "e315359a852f75189c8e97781260cffd47fe9d098cb5c5066edb8e4bf64dd95e",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/041.png",
+      "target": "quota-pet/assets/executing-soft/frames/041.png",
+      "bytes": 381451,
+      "sha256": "bd1b41348a8686c65785a01477b47829f1cd2a4049330572238ade93b65d4139",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-running-v6/frames/042.png",
+      "target": "quota-pet/assets/executing-soft/frames/042.png",
+      "bytes": 381377,
+      "sha256": "914780a0552a7fc58e15a57c6213d85f567238f10a284d4ec0fa20f0e74161ab",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frame-durations.txt",
+      "target": "quota-pet/assets/confirmation-soft/frame-durations.txt",
+      "bytes": 132,
+      "sha256": "ee081b926daa774c520f6894a3141f5d0ea0463d1882af3ae29cedd5c22ed348",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/000.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/000.png",
+      "bytes": 387528,
+      "sha256": "d6ea822230a8e49cf6dd069e9b850ecea80ff4f62cca5bbd4e0243e62b28fb47",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/001.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/001.png",
+      "bytes": 388417,
+      "sha256": "069d395955075bf06676a13d56585ab46b668da60d3e3ee57a327812844c163b",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/002.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/002.png",
+      "bytes": 388792,
+      "sha256": "5ea2c5b14e0624b998d23063e9adccee040809c5c6d4ce854c2abf8c7ad39c99",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/003.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/003.png",
+      "bytes": 388720,
+      "sha256": "9fa681c7df17bb6d1ba4af73c2afaa957bbf86314f8cf9be8b4cc3f9000c2a30",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/004.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/004.png",
+      "bytes": 388935,
+      "sha256": "33ab43fcbb9bffaf4dd91db8ce47fd11373cda815f3c3b37582fddd7fa1af884",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/005.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/005.png",
+      "bytes": 389377,
+      "sha256": "381a0f5b05df23550eae6b252e46942b8c9beb0196dfabd5fbeebc3eac6ac865",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/006.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/006.png",
+      "bytes": 389372,
+      "sha256": "6c6a13ff848aff45acb88c5665520fa91c7ccc25d81fcef4f2b1c4a623351936",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/007.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/007.png",
+      "bytes": 389413,
+      "sha256": "8a3bba46ce98e3f64d2f457d218d393ae65e7c0ffeb42bae58a3ba43e2ee1d1b",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/008.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/008.png",
+      "bytes": 389244,
+      "sha256": "01f154680e594e49230d822977d4264400b85e4968c2273a2f34dfc2da1c9f4e",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/009.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/009.png",
+      "bytes": 389146,
+      "sha256": "7b4180952355fd681f9a22be45ca5fa51fa38051ca6ae6ff980b337cd89ecc84",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/010.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/010.png",
+      "bytes": 389235,
+      "sha256": "0c446b544797934ec7a337d42fc9bdc143d1e7ee9abeb2b21db6f8da256eb8a5",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/011.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/011.png",
+      "bytes": 389147,
+      "sha256": "3c48b3efbd061be5c13ea0627507d9f8b82e5de2f595b036ef0624b598154b0b",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/012.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/012.png",
+      "bytes": 388491,
+      "sha256": "2041591d5802b7a22e9855aa93094a2bcfbedf42ab8064412768dd929d79b5a2",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/013.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/013.png",
+      "bytes": 388412,
+      "sha256": "cc802d42b4ec64a167f43483bc67ea550f1a5d2897f4e6c96697954afdda9842",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/014.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/014.png",
+      "bytes": 387538,
+      "sha256": "1b87423702da5c0f671ede816865b12df5c6fea4e529b0bb0e068d80e0475e2e",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/015.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/015.png",
+      "bytes": 387482,
+      "sha256": "dbd2985849dc65b37f6a288ff89dce518941c6ab4149abb1a003d04a6ff609df",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/016.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/016.png",
+      "bytes": 387349,
+      "sha256": "877e78fa5679e65ba4305f244e9c05ff699e044bf83ff9b38951880605beff26",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/017.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/017.png",
+      "bytes": 387156,
+      "sha256": "1f8cea7ea88fe3dc285932c718761738ae7e7c51315d8770927f1657ccc2d74a",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/018.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/018.png",
+      "bytes": 378196,
+      "sha256": "97ef5fd127cb006745f0951dee1ebb8846ce61f0d1c52deba1b17c19a699a36d",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/019.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/019.png",
+      "bytes": 378196,
+      "sha256": "97ef5fd127cb006745f0951dee1ebb8846ce61f0d1c52deba1b17c19a699a36d",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/020.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/020.png",
+      "bytes": 378196,
+      "sha256": "97ef5fd127cb006745f0951dee1ebb8846ce61f0d1c52deba1b17c19a699a36d",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/021.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/021.png",
+      "bytes": 387013,
+      "sha256": "77053a111be9c0e75be3044c7ff12207565450eb512c38d6e89070dd1166702a",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/022.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/022.png",
+      "bytes": 387110,
+      "sha256": "0e0fdcca864c2e06f3350b5cbe8e8c0f786ba67cec70a9aec692ec3e0a1cf2c6",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/023.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/023.png",
+      "bytes": 387116,
+      "sha256": "8a4325bf9d4dd61ed818aca68ac787a27108bfa17b951a389521e2e8b62f3838",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/024.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/024.png",
+      "bytes": 387309,
+      "sha256": "c3a8a71413ab4bcb694c3f0f2ef1b373d65a1d2456066d966b007bfa4bf36a49",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/025.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/025.png",
+      "bytes": 387194,
+      "sha256": "d414eb8b18a1bbfeb3a323e407deda89b749ab599b653c3213b5182258728025",
+      "bundled": false
+    },
+    {
+      "source": "pet/animations/soft-portrait-confirmation-v3/frames/026.png",
+      "target": "quota-pet/assets/confirmation-soft/frames/026.png",
+      "bytes": 387615,
+      "sha256": "a658197f481ef0ba5c01e08418c8c537795666c36dc4ac6afa6e2c8853c8bed5",
+      "bundled": false
+    }
+  ],
+  "note": "No runtime materials are bundled. Hashes identify the previous local assets only; provide your own authorized replacements using an external manifest."
+}

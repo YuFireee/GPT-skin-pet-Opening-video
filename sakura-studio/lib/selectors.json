@@ -1,0 +1,15 @@
+{
+  "shell-main": "main:is(.main-surface, [data-app-shell-main-surface], [class*=\"_MainContentSurface_\"])",
+  "left-panel": "aside.app-shell-left-panel",
+  "header-tint": "header:is(.app-header-tint, [data-app-shell-header-edge-scroll], [class*=\"_Header_\"])",
+  "home-route": "[role=\"main\"]:has([data-testid=\"home-icon\"])",
+  "composer-chrome": ":is(.composer-surface-chrome, [class*=\"_ComposerLayoutRoot_\"], [data-composer-surface-variant][data-composer-radius-variant])",
+  "composer-toolbar": ":is(.composer-surface-chrome [class*=\"_footer_\"], [class*=\"_ComposerLayoutRoot_\"] [class*=\"_ComposerLayoutFooter_\"], [data-composer-surface-variant][data-composer-radius-variant] :is([data-composer-footer-responsive], [class*=\"_ComposerLayoutFooter_\"], [class*=\"_footer_\"]))",
+  "thread-surface": ".thread-scroll-container",
+  "message": ":is([data-message-author-role], [data-local-conversation-user-anchor], [data-local-conversation-final-assistant])",
+  "overlay-menu": "[role=\"menu\"]",
+  "overlay-dialog": "[role=\"dialog\"]",
+  "menu-bar": "[class*=\"_ApplicationMenuTopBar_\"]",
+  "icon-rail": "nav[class~=\"group/sidebar-rail\"]",
+  "native-backdrops": "[class*=\"_MainContentTopFade_\"], [class~=\"group/thread-scroll-layout\"] [class~=\"pointer-events-none\"][class~=\"bg-gradient-to-t\"][class~=\"from-surface\"], [class~=\"group/thread-scroll-layout\"] [class~=\"pointer-events-none\"][class~=\"bg-surface\"][class~=\"mt-8\"], [class~=\"group/thread-scroll-layout\"] [class*=\"_background_\"][class~=\"pointer-events-none\"][class~=\"absolute\"][class~=\"inset-x-0\"]"
+}

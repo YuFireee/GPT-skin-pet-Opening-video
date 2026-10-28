@@ -1,0 +1,11 @@
+{
+  "name": "gpt-niang-usage",
+  "version": "1.3.4",
+  "private": true,
+  "type": "module",
+  "description": "樱色工坊集成的 GPT-Niang 1.3.4 运行组件；从仓库根目录执行测试。",
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
