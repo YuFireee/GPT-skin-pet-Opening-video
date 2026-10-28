@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN" data-ds-part="root">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>樱色静庭 · 主题预览</title>
+<style>
+  *{box-sizing:border-box} body{margin:0;background:#131117;color:#eee9f0;font:14px/1.65 system-ui,"Segoe UI",sans-serif}
+  button,textarea{font:inherit;color:inherit} button{cursor:pointer} button:focus-visible,textarea:focus-visible,a:focus-visible{outline:2px solid #b9c9e0;outline-offset:3px}
+  button{border:1px solid #443b4b;background:#29232f;border-radius:9px;padding:7px 12px} button:hover{background:#37303f} a{color:#d6c6df;text-underline-offset:3px}
+  .page{max-width:1720px;margin:auto;padding:28px 28px 20px}.top{display:flex;justify-content:space-between;gap:24px;align-items:center;margin-bottom:20px}.top h1{font-size:23px;font-weight:600;letter-spacing:.02em;margin:0}.top p{margin:3px 0 0;color:#bbb0c3}.badge{font-size:12px;border:1px solid #4a3d54;border-radius:99px;padding:4px 11px;white-space:nowrap;color:#cfc0dc}
+  .controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:18px}.group{display:flex;gap:5px;padding:4px;border:1px solid #39303f;border-radius:13px;background:#1d1823}.group button{background:transparent;border-color:transparent;padding:6px 13px}.group button[aria-pressed=true]{background:#403346;border-color:#65506b;color:#fff}
+  .toggle{display:flex;gap:8px;align-items:center;margin-left:auto;color:#c4b8cd}.toggle input{accent-color:#c3b0cf;width:16px;height:16px}.download{font-size:13px}
+  .desktop{position:relative;isolation:isolate;height:760px;max-height:calc(100vh - 230px);min-height:470px;border:1px solid #4c4056;border-radius:16px;overflow:hidden;box-shadow:0 18px 55px #0004;display:flex;flex-direction:column;background:#19161e}
+  .chrome{height:43px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 17px;border-bottom:1px solid #3d3545;background:#211c28}.chrome span:last-child{color:#b7a9c3;font-size:12px}.workspace{display:flex;flex:1;min-height:0}
+  .icon-rail{width:44px;flex:none;padding:12px 5px;display:flex;flex-direction:column;gap:12px;background:rgba(35,25,40,.65);border-right:1px solid #c3a0d322}.icon-rail button{padding:5px;border-color:transparent;background:transparent}.sidebar{width:218px;flex:none;padding:19px 14px;background:#211d27;border-right:1px solid #3b3242;display:flex;flex-direction:column;gap:14px}.brand{font-size:17px;font-weight:600;padding:0 9px}.sidebar button{text-align:left;border-color:transparent;background:transparent;padding:8px 10px;width:100%}.sidebar .new{border-color:#dfcce03d;background:#b792c53d}.sidebar nav{display:grid;gap:5px}.sidebar small{display:block;color:#e9e0ef;padding:7px 10px}.sidebar .active{background:#b792c55c;border:1px solid #dfcce047}.sidebar .bottom{margin-top:auto;font-size:12px;padding:6px 10px;color:#e9e0ef}
+  .main{position:relative;isolation:isolate;min-width:0;flex:1;display:flex;flex-direction:column;background:transparent}.art{position:absolute;inset:0;z-index:-1;pointer-events:none;background-repeat:no-repeat;background-size:cover;background-position:26% 48%}
+  .header{flex:none;display:flex;align-items:center;justify-content:space-between;height:49px;border-bottom:1px solid #3b3242;padding:0 23px;background:#211c28}.header .icon{padding:2px 9px;font-size:17px}
+  .route{flex:1;min-height:0;overflow:auto;padding:28px 30px}.home-column{width:46%;max-width:500px;margin:28px 0 0 auto}.hero{padding:20px 23px;border:1px solid #4a4053;border-radius:14px;margin-bottom:15px;background:#211c28}.eyebrow{color:#e9e0ef;font-size:12px;letter-spacing:.1em;margin:0}.hero h2{font-size:26px;margin:6px 0 7px;font-weight:500;line-height:1.4}.hero p{margin:0;color:#e9e0ef}.projects{padding:8px;border:1px solid #4a4053;border-radius:13px;background:#211c28}.projects button{display:flex;justify-content:space-between;width:100%;text-align:left;background:transparent;border-color:transparent;padding:10px}.projects button+button{border-top:1px solid #ffffff18;border-radius:0}.projects span{color:#e9e0ef}
+  .thread{max-width:700px;margin:0 auto;display:grid;gap:15px}.message{padding:18px 21px;border:1px solid #493c51;border-radius:18px;background:#211c28}.user-message{display:flex;justify-content:flex-end;background:transparent;border:0;padding:0}.user-bubble{max-width:85%;padding:12px 18px;border-radius:20px;background:rgba(93,74,97,.65);color:#f5f1f7}.message small{color:#e9e0ef}.message p{margin:8px 0}.message ul{margin:8px 0;padding-left:22px}.message code{font:13px/1.6 ui-monospace,Consolas,monospace;background:#241b2b;padding:2px 5px;border-radius:4px}.message pre{overflow:auto;padding:12px;background:#241b2b;border:1px solid #d0b8d51c;border-radius:8px}.message pre code{padding:0}.message a{color:#b9c9e0}
+  .composer-holder{flex:none;max-width:760px;width:calc(100% - 58px);margin:0 auto 24px}.composer{background:#28212f;border:1px solid #57465f;border-radius:22px;padding:13px 15px 10px}.composer textarea{width:100%;height:45px;min-height:45px;max-height:100px;resize:vertical;background:transparent;border:0;outline:none;padding:2px;font-size:14px;display:block}.composer textarea::placeholder{color:#e9e0ef}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:7px;color:#e9e0ef}.toolbar .tools{display:flex;gap:7px;align-items:center}.toolbar button{padding:3px 9px;background:transparent;border-color:transparent}.toolbar .send{background:#c9b3cee6;color:#2b1f30;border-color:#d8c4dc}.footnote{text-align:center;color:#e9e0ef;font-size:11px;margin:6px 0 0}.notice{min-height:20px;margin:12px 0 0;color:#e9e0ef;font-size:12px}.footer{margin-top:17px;display:flex;justify-content:space-between;gap:16px;color:#b9acc4;font-size:12px}.footer p{margin:0}
+  dialog{max-width:420px;border:1px solid #5b4964;border-radius:16px;padding:24px;background:#211a28;color:#f1edf3}dialog::backdrop{background:#100b16a6}dialog h2{margin:0;font-size:20px}dialog p{color:#e9e0ef}
+  .native .art{visibility:hidden}.native .main{background:#19161f}[hidden]{display:none!important}
+  @media(min-width:1550px){.home-column{margin-top:60px;max-width:550px;margin-right:30px}.route{padding:32px 45px}}
+  @media(max-width:1000px){.page{padding:19px 16px}.sidebar{width:180px;padding:15px 10px}.route{padding:20px}.home-column{width:58%;max-width:430px;margin-top:10px}.desktop{max-height:none;height:660px}.hero h2{font-size:23px}.composer-holder{width:calc(100% - 36px);margin-bottom:18px}}
+  @media(max-width:720px){.top{align-items:flex-start;gap:10px}.top h1{font-size:20px}.badge{white-space:normal}.sidebar{display:none}.controls{gap:8px}.toggle{margin-left:0}.desktop{position:relative;isolation:isolate;height:700px;min-height:540px}.route{padding:16px}.hero{padding:17px}.home-column{width:70%;max-width:none;margin-top:10px}.header{padding:0 17px}.footer{display:block}.footer p+p{margin-top:4px}}
+  .desktop{color-scheme:dark;scrollbar-color:#8e7494 #2b1f30}.route{scrollbar-color:#8e7494 #2b1f30}
+  .sidebar button:hover{background:#b792c54d}.sidebar button:active{background:#b792c566}.header .icon{background:#b792c533;border-color:#dfcce030}
+  .petals{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1}.petals i{position:absolute;top:-35px;left:var(--x);width:10px;height:15px;background:linear-gradient(135deg,#fff0f4d9,#ed9bb6a6);border-radius:80% 10% 70% 35%;animation:petal-drift var(--duration) linear infinite;animation-delay:var(--delay);opacity:0}
+  @keyframes petal-drift{0%{transform:translate3d(0,-20px,0) rotate(0deg);opacity:0}8%{opacity:.6}88%{opacity:.45}100%{transform:translate3d(110px,105vh,0) rotate(380deg);opacity:0}}
+  .petals{display:none}
+  @media(prefers-reduced-motion:reduce){.petals{display:none}}
+  #petal-toggle{padding:2px 9px;margin-left:10px;background:#b792c522;border-color:#dfcce030}
+  #exit-immersive,#petal-toggle{display:none!important}
+  #exit-immersive{display:none;padding:2px 9px;margin-left:12px;background:#ffffff0b;border-color:#ffffff24}
+  .immersive .page{max-width:none;padding:0}.immersive .top,.immersive .controls,.immersive .footer,.immersive .notice{display:none}
+  .immersive .desktop{height:100dvh;max-height:none;min-height:0;border:0;border-radius:0;box-shadow:none}.immersive #exit-immersive{display:inline-block}
+</style>
+<style id="theme-layer"></style>
+<div class="page">
+  <header class="top"><div><h1>樱色静庭</h1><p>两张背景，两种安静的工作氛围。</p></div><span class="badge">设计模拟预览 · 非桌面实机截图</span></header>
+  <div class="controls">
+    <div class="group" aria-label="背景选择"><button type="button" data-theme="0" aria-pressed="true">柔光肖像</button></div>
+    <div class="group" aria-label="页面选择"><button type="button" data-route="home" aria-pressed="true">首页</button><button type="button" data-route="chat" aria-pressed="false">对话</button></div>
+    <button id="immerse" type="button">铺满窗口</button><label class="toggle"><input type="checkbox" id="enabled" checked>显示主题</label>
+    <a class="download" id="download" href="#" download>下载此主题 ZIP</a>
+  </div>
+  <div class="desktop" id="desktop"><div class="art" id="art" aria-hidden="true"></div><div class="petals" id="petals" aria-hidden="true"></div>
+    <div class="chrome" data-ds-part="menubar"><span>ChatGPT</span><span>设计预览 · 未应用桌面 <button id="petal-toggle" type="button" aria-pressed="true">樱花飘落：开</button><button id="exit-immersive" type="button">返回选项</button></span></div>
+    <div class="workspace"><nav class="icon-rail" data-ds-part="rail" aria-label="图标栏预览"><button type="button" aria-label="首页示例">⌂</button><button type="button" aria-label="文件示例">▱</button><button type="button" aria-label="更多示例">⋯</button></nav>
+      <aside class="sidebar" data-ds-part="sidebar"><div class="brand">ChatGPT</div><button class="new" type="button" id="new-chat">＋ 新聊天</button><nav aria-label="示例导航"><button type="button" class="active">樱色静庭</button><button type="button">项目与灵感</button><button type="button">阅读笔记</button><button type="button">日常工作</button></nav><small>最近</small><nav><button type="button">今天要完成的事</button><button type="button">整理参考资料</button><button type="button">继续昨天的想法</button></nav><div class="bottom">静态背景 · 保留原有操作</div><button type="button" id="settings">⚙ 预览说明</button></aside>
+      <main class="main" data-ds-part="main">
+        <div class="header" data-ds-part="header"><span id="page-title">新的开始</span><button class="icon" id="menu" type="button" aria-label="打开预览说明">⋯</button></div>
+        <section class="route" id="home" data-ds-part="home"><div class="home-column"><div class="hero" data-ds-part="home-hero"><p class="eyebrow">SAKURA CALM</p><h2>把注意力，留给正在做的事。</h2><p>背景安静地陪伴，文字始终清晰。</p></div><div class="projects" data-ds-part="project-list"><button type="button" data-sample="整理今天的计划">整理今天的计划 <span>↗</span></button><button type="button" data-sample="帮我梳理一篇长文">梳理一篇长文 <span>↗</span></button><button type="button" data-sample="继续我的项目">继续我的项目 <span>↗</span></button></div></div></section>
+        <section class="route" id="chat" hidden><div class="thread" data-ds-part="thread"><article class="user-message" data-ds-part="user-message"><div class="user-bubble">让主题更好看，也让阅读更轻松。</div></article><article class="message" data-ds-part="message"><small>ChatGPT · 示例内容</small><p>文字、按钮和输入框仍是界面的主角。</p><ul><li>中文与英文排版保持原有节奏。</li><li>深色面板衬托正文，图片不拦截点击。</li><li>代码和表格有独立底色，长内容仍可滚动。</li></ul><pre><code>const theme = "sakura-calm";
+console.log("保持专注");</code></pre><p><a href="#notes" id="example-link">查看示例链接</a>，也可以试着输入一段话。</p></article></div></section>
+        <div class="composer-holder"><div class="composer" data-ds-part="composer"><textarea id="input" aria-label="预览输入框" placeholder="写下你的想法……（仅在本页演示，不会发送）"></textarea><div class="toolbar" data-ds-part="composer-toolbar"><div class="tools"><button id="attach" type="button" aria-label="预览附件按钮">＋</button><span>本地预览</span></div><button class="send" id="send" type="button" aria-label="演示发送">↑</button></div></div><p class="footnote">仅演示外观与点击；不会连接账号或提交消息。</p></div>
+      </main>
+    </div>
+  </div>
+  <p class="notice" id="notice" role="status" aria-live="polite">整窗连续背景 · 梅紫色对话面板 · 柔和边框与输入框</p>
+  <footer class="footer" id="notes"><p>图片原样保留 · 樱花动画可关闭 · 动画仅限本地预览</p><p><a href="使用说明.md">使用说明</a> · <a href="package-checks.json">包检查</a> · <a href="preview-checks.json">预览检查</a></p></footer>
+</div>
+<dialog id="info" data-ds-part="dialog"><h2>这是一张可操作的预览</h2><p>可以切换背景、查看对话、输入文字及点击按钮。这里没有连接你的账号，也不是正在运行的桌面应用。</p><p>实际应用需使用 Dream Skin 导入 ZIP，再从已保存主题中选择。当前桌面版本的实机效果尚未验证。</p><button type="button" id="close-info">知道了</button></dialog>
+<script src="preview-data.js"></script><script src="preview-motion.js"></script><style id="studio-controls"></style>
+<script>
+  const themes=window.SAKURA_THEMES; let selected=0;
+  document.body.classList.toggle('immersive',new URLSearchParams(location.search).get('immersive')==='1');
+  const $=s=>document.querySelector(s);
+  for(let i=0;i<12;i++){const petal=document.createElement('i');petal.style.cssText=`--x:${(i*8.3+2)%96}%;--duration:${17+i%5*2}s;--delay:-${i*2.7}s`;$('#petals').append(petal)}
+  $('#petal-toggle').addEventListener('click',()=>{const off=$('#desktop').classList.toggle('petals-off');$('#petal-toggle').setAttribute('aria-pressed',String(!off));$('#petal-toggle').textContent='樱花飘落：'+(off?'关':'开')});
+  function update(){const v=themes[selected];$('#art').style.backgroundImage=`url("${v.image}")`;$('#art').style.backgroundPosition=`${v.theme.art.focusX*100}% ${v.theme.art.focusY*100}%`;$('#theme-layer').textContent=$('#enabled').checked?v.css:'';$('#desktop').classList.toggle('native',!$('#enabled').checked);$('#download').href=v.zip;document.querySelectorAll('[data-theme]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.theme===selected)));document.title=v.name+' · 设计预览';}
+  function route(name){$('#home').hidden=name!=='home';$('#chat').hidden=name!=='chat';$('#page-title').textContent=name==='home'?'新的开始':'阅读与工作';document.querySelectorAll('[data-route]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.route===name)));}
+  document.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>{selected=+b.dataset.theme;update()}));
+  document.querySelectorAll('[data-route]').forEach(b=>b.addEventListener('click',()=>route(b.dataset.route)));
+  $('#enabled').addEventListener('change',update);
+  $('#immerse').addEventListener('click',()=>document.body.classList.add('immersive'));
+  $('#exit-immersive').addEventListener('click',()=>document.body.classList.remove('immersive'));
+  $('#new-chat').addEventListener('click',()=>{route('home');$('#input').value='';$('#notice').textContent='已清空本地演示输入。'});
+  function openInfo(){$('#info').showModal()} $('#settings').addEventListener('click',openInfo);$('#menu').addEventListener('click',openInfo);$('#close-info').addEventListener('click',()=>$('#info').close());
+  $('#attach').addEventListener('click',()=>{$('#notice').textContent='附件按钮可点击；演示页不访问你的文件。'});
+  document.querySelectorAll('[data-sample]').forEach(b=>b.addEventListener('click',()=>{$('#input').value=b.dataset.sample;$('#input').focus()}));
+  $('#send').addEventListener('click',()=>{$('#notice').textContent=$('#input').value.trim()?'输入框工作正常：内容仅留在当前预览页，没有发送。':'可以先输入一段文字，再测试这个按钮。'});
+  $('#example-link').addEventListener('click',()=>{$('#notice').textContent='链接可正常点击。'});update();
+  window.setStudioTheme=function(settings){document.querySelector('#desktop').classList.toggle('petals-off',settings.motion===false);selected=0;update();const rules=[['sidebar',settings.sidebar],['header',settings.header],['menubar',settings.menubar??12],['rail',settings.rail??35],['message',settings.message],['composer',settings.composer]].map(([part,value])=>'[data-ds-part="'+part+'"] {background-color:rgba(35,25,40,'+(1-value/100)+') !important;}').join('\n');document.querySelector('#studio-controls').textContent=rules;window.setSakuraPreviewMotion({...settings,image:themes[selected].image,focusX:themes[selected].theme.art.focusX});};
+  window.setStudioRoute=route;document.querySelector('#desktop').classList.add('petals-off');
+  if(new URLSearchParams(location.search).get('route')==='chat')route('chat');
+</script>
+</html>

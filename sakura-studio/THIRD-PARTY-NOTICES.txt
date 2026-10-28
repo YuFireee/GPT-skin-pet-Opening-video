@@ -1,0 +1,31 @@
+Selector definitions adapted from Fei-Away/Codex-Dream-Skin, revision 6fc42df48a6a5365011f55cc349e20c038e56d1d. No upstream runtime bundled.
+
+MIT License
+
+Copyright (c) 2026 Codex Dream Skin Studio contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+GPT-Niang v1.3.4, T7moris and contributors, MIT code. https://github.com/T7moris/GPT-Niang/tree/v1.3.4
+Full code license: quota-pet/LICENSE. Modifications: quota-pet/MODIFICATIONS.md. Original asset notices retained.
+
+Dragon Codex Boot, yushua0808-cpu and contributors, MIT. https://github.com/yushua0808-cpu/dragon-codex-boot
+DWM live-window handoff design and interop adapted for the Sakura launcher. License: DRAGON-BOOT-LICENSE.txt. Original video is not included or modified.
+
+Local startup media (not included in public source): the user-supplied AIT20261021183513PCA2LVQD.mp4, copied without re-encoding as assets/sakura-opening.mp4 (H.264/AAC, 1344x768, about 9.4 seconds). This replaced the earlier three-clip interim opening. The waiting overlay is drawn locally in WPF. Media and character artwork are not covered by upstream code MIT licenses. See assets/LICENSE.txt and quota-pet/assets notices (public source retains historical notices under materials/notices; actual media must be supplied separately). No FFmpeg executable or upstream Dragon startup video is bundled.
