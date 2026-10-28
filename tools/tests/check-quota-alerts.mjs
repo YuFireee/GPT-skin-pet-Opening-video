@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';import {evaluateQuotaAlerts} from '../../sakura-studio/quota-pet/runtime/quota-alerts.mjs';
+const start=1800000000000;const snap=(remaining,at=start,reset=start/1000+60,accountKey='fixture')=>({ok:true,queryOk:true,accountKey,observedAt:at,windows:[{kind:'timed',minutes:300,remaining,resetsAt:reset}]});
+let r=evaluateQuotaAlerts(null,snap(15),{now:start});assert.deepEqual(r.events.map(e=>e.kind),['low','reset-soon']);
+const persisted=JSON.parse(JSON.stringify(r.state));assert.equal(evaluateQuotaAlerts(persisted,snap(15),{now:start+1000}).events.length,0);
+r=evaluateQuotaAlerts(persisted,snap(14,start+1000),{now:start+1000});assert.equal(r.events.length,0);
+assert.equal(evaluateQuotaAlerts(r.state,{...snap(90),queryOk:false},{now:start}).events.length,0);
+assert.equal(evaluateQuotaAlerts(r.state,snap(90,start),{now:start+600000}).events.length,0);
+assert.equal(evaluateQuotaAlerts(r.state,snap(15,start+61000),{now:start+61000}).events.length,0,'Passing reset time alone must not mean restored');
+r=evaluateQuotaAlerts(r.state,snap(90,start+61000,start/1000+18000),{now:start+61000});assert.deepEqual(r.events.map(e=>e.kind),['restored']);
+assert.equal(evaluateQuotaAlerts(r.state,snap(90,start+62000,start/1000+18000,'other'),{now:start+62000}).events.length,0,'Account change is not a reset');
+assert.equal(evaluateQuotaAlerts(null,snap(15),{now:start,enabled:false}).events.length,0);
+assert.equal(evaluateQuotaAlerts(null,snap(null),{now:start}).events.length,0);
+assert.equal(evaluateQuotaAlerts(null,snap(15,start,start/1000+18000),{now:start,threshold:10}).events.length,0);
+console.log('Quota alert checks passed: threshold, near reset, persisted dedup, fresh confirmed restoration only, invalid/stale/account-change/disabled guards');

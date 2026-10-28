@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {themeStartupPending} from '../../sakura-studio/lib/theme-startup.mjs';
+import fs from 'node:fs/promises';
+const deadline=25000;
+assert(themeStartupPending({owned:true,running:true,window:null},deadline,1000));
+assert(themeStartupPending({owned:false,managedProcessCount:1,listenerCount:0},deadline,1000));
+assert(!themeStartupPending({owned:false,managedProcessCount:0,listenerCount:0},deadline,1000));
+assert(!themeStartupPending({owned:false,managedProcessCount:1,listenerCount:1},deadline,1000));
+assert(!themeStartupPending({owned:true},deadline,25000));
+assert(!themeStartupPending({owned:true},0,1000));
+const script=await fs.readFile(new URL('../../sakura-studio/start.ps1',import.meta.url),'utf8');
+assert(!script.includes('$confirmed.desktop.pageVisible'));
+assert(script.includes('$confirmed.connection.owned -and $confirmed.connection.window.visible'));
+assert(script.includes('AddSeconds(30)'));
+console.log(JSON.stringify({passed:true,checks:['Explicit launch tolerates native window creation only inside a fixed 25s deadline','Missing or foreign applications do not gain a retry grace period','A verified themed native window can be occluded without reporting launch failure','Launcher confirmation waits for initial loading, with a bounded deadline']}));

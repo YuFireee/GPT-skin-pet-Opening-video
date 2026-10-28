@@ -1,0 +1,20 @@
+{
+  "name": "sakura-studio",
+  "version": "0.9.6",
+  "private": true,
+  "description": "Windows 本地主题、额度桌宠与启动动画整合工具",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "prepare:app": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/prepare.ps1",
+    "audit:source": "node tools/audit.mjs",
+    "audit:runtime": "node tools/audit.mjs --runtime",
+    "test": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/check.ps1",
+    "package:app": "python tools/package.py",
+    "export:source": "python tools/export-source.py"
+  },
+  "devDependencies": {
+    "playwright": "^1.58.2"
+  }
+}

@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {createAnnouncementReader,normalizeAnnouncements} from '../../sakura-studio/quota-pet/runtime/reset-announcements.mjs';
+const data={data:{latest_reset:{id:'a',reset_type:'regular',announced_at:'2026-10-22T17:00:00Z',text:'reset',source:{url:'https://x.com/thsottiaux/status/1'}},scheduled_reset:{id:'b',reset_type:'banked',announced_at:'2026-10-23T00:00:00Z',scheduled_for:'2026-10-23T01:00:00Z',text:'scheduled',source:{url:'javascript:alert(1)'}},active_watch:{text:'forecast'}},meta:{api_version:'v1'}};
+let at=100000,calls=0,stored;
+const reader=createAnnouncementReader({now:()=>at,save:value=>stored=value,fetcher:async()=>{calls++;return Response.json(data,{headers:{etag:'test'}})}});
+await reader.tick({active:false});await reader.tick({enabled:false});assert.equal(calls,0);
+await Promise.all([reader.tick(),reader.tick()]);assert.equal(calls,1);assert.equal(stored.scheduled.scheduled,true);assert.equal(stored.scheduled.url,'https://codex-resets.com');assert.equal(stored.active_watch,undefined);
+await reader.tick();assert.equal(calls,1);at+=1800000;await reader.tick();assert.equal(calls,2);
+const restarted=createAnnouncementReader({now:()=>at,read:()=>stored,fetcher:async()=>{throw Error('must retain restart cache')}});await restarted.tick();assert.equal(restarted.snapshot().error,null);
+at+=1800000;await restarted.tick();assert.match(restarted.snapshot().error,/公告读取失败/);assert.equal(restarted.snapshot().latest.id,'a');
+let headers;
+const conditional=createAnnouncementReader({now:()=>at,read:()=>({...stored,nextCheckAt:0}),fetcher:async(url,options)=>{headers=options.headers;return new Response(null,{status:304})}});await conditional.tick();assert.equal(headers['If-None-Match'],'test');assert.equal(conditional.snapshot().latest.id,'a');
+const retry=createAnnouncementReader({now:()=>at,fetcher:async()=>new Response(null,{status:429,headers:{'retry-after':'7200'}})});await retry.tick();assert.equal(retry.snapshot().nextCheckAt,at+7200000);
+const large=createAnnouncementReader({now:()=>at,fetcher:async()=>new Response('x'.repeat(65537))});await large.tick();assert(large.snapshot().error);
+const timeout=createAnnouncementReader({now:()=>at,timeoutMs:10,fetcher:async(url,{signal})=>new Promise((resolve,reject)=>signal.addEventListener('abort',()=>reject(Error('abort'))))});await timeout.tick();assert(timeout.snapshot().error);assert.equal(timeout.busy,false);
+assert.throws(()=>normalizeAnnouncements({meta:{api_version:'v2'}}));assert.equal(normalizeAnnouncements(data).scheduled.scheduled,true,'A passed scheduled date must remain scheduled');
+console.log('Announcement checks passed: bounded read, cache/restart, single flight, disabled/inactive, timeout, retry-after, ETag, untrusted links, scheduled semantics');

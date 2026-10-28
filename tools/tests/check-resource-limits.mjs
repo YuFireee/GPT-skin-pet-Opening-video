@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';import fs from 'node:fs/promises';import path from 'node:path';
+import {singleFlight} from '../../sakura-studio/lib/single-flight.mjs';
+import {readUsage,resolveCodexExecutable} from '../../sakura-studio/quota-pet/runtime/usage.mjs';
+let calls=0,clock=0,release;
+const probe=singleFlight(()=>{calls++;return new Promise(r=>release=r)},{now:()=>clock,ttlMs:750});
+const requests=Array.from({length:100},()=>probe());await Promise.resolve();assert.equal(calls,1);release({ok:true});await Promise.all(requests);await probe();assert.equal(calls,1);
+clock=751;const second=probe();await Promise.resolve();assert.equal(calls,2);release({ok:true});await second;
+let attempts=0;const failing=singleFlight(async()=>{attempts++;throw Error('unavailable')});await assert.rejects(failing());assert.equal(attempts,1);await new Promise(r=>setTimeout(r,30));assert.equal(attempts,1,'An inspection error must not retry itself');
+assert.equal(resolveCodexExecutable('missing-executable',{platform:'win32',env:{}}),null);
+const alias=path.resolve('reports/alias-fixture/codex.exe');await fs.mkdir(path.dirname(alias),{recursive:true});await fs.writeFile(alias,'');assert.equal(resolveCodexExecutable(alias,{platform:'win32',env:{PATH:path.dirname(alias)}}),null,'A zero-byte Windows execution alias must not be invoked');await fs.rm(alias);
+let spawns=0;const result=await readUsage(null,{spawnProcess:()=>{spawns++;throw Error('must not spawn')}});assert.equal(spawns,0);assert.equal(result.errorCode,'ENOENT');
+const report={passed:true,checks:['100 concurrent connection checks share one in-flight inspection','Cache expires and failed probes do not retry themselves','Missing CLI and zero-byte execution aliases are rejected without invoking a default application']};await fs.mkdir('reports',{recursive:true});await fs.writeFile(path.resolve('reports/resource-limit-checks.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));

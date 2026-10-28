@@ -1,0 +1,30 @@
+import fs from 'node:fs/promises';import path from 'node:path';import os from 'node:os';import assert from 'node:assert/strict';
+import {reduceDialogState,summarizeDialogState} from '../../sakura-studio/quota-pet/runtime/dialog-state.mjs';
+import {createActivityReader} from '../../sakura-studio/quota-pet/runtime/activity.mjs';
+let now=Date.now();
+const row=(type,payload)=>({timestamp:new Date(now).toISOString(),type,payload});
+const event=type=>row('event_msg',{type});
+let state=reduceDialogState(null,event('task_started'),now);assert.equal(state.state,'running');
+state=reduceDialogState(state,row('response_item',{type:'function_call',name:'functions.request_user_input_async',call_id:'async'}),now);assert.equal(state.state,'running');
+state=reduceDialogState(state,row('response_item',{type:'function_call',name:'functions.request_user_input',call_id:'blocking',arguments:'PRIVATE_CONTENT_NOT_SAVED'}),now);assert.equal(state.state,'confirmation');
+state=reduceDialogState(state,row('response_item',{type:'function_call_output',call_id:'other'}),now);assert.equal(state.state,'confirmation');
+state=reduceDialogState(state,row('response_item',{type:'function_call_output',call_id:'blocking'}),now);assert.equal(state.state,'running');
+state=reduceDialogState(state,row('event_msg',{type:'item_completed',item:{type:'AgentMessage',phase:'final',content:'PRIVATE_CONTENT_NOT_SAVED'}}),now);assert.equal(state.state,'normal');
+state=reduceDialogState(state,row('event_msg',{type:'token_count'}),now);assert.equal(state.state,'normal','Late token accounting must not restart animation');
+assert.equal(summarizeDialogState([{dialog:state}],now+600001).state,'normal');
+assert.equal(summarizeDialogState([{archived:true,dialog:{state:'running',at:now}}],now).reason,'no_recent_signal');
+const old={timestamp:new Date(now-700000).toISOString(),type:'event_msg',payload:{type:'task_started'}};assert.equal(reduceDialogState(state,old,now),state);
+const home=await fs.mkdtemp(path.join(os.tmpdir(),'sakura-dialog-'));let reader,restarted;
+try{
+ const directory=path.join(home,'sessions');await fs.mkdir(directory);const file=path.join(directory,'current.jsonl'),cacheFile=path.join(home,'index.json');
+ await fs.writeFile(file,JSON.stringify(event('task_started'))+'\n');
+ reader=createActivityReader({home,now:()=>now,cacheFile,watchChanges:true});let snapshot=await reader.read();assert.equal(snapshot.dialog.state,'running');
+ restarted=createActivityReader({home,now:()=>now,cacheFile,budget:1});assert.equal((await restarted.read()).dialog.state,'running','A resumed EOF checkpoint must inspect bounded state tail');restarted.dispose();
+ now+=1000;await fs.appendFile(file,JSON.stringify(row('response_item',{type:'function_call',name:'request_permissions',call_id:'approval',arguments:'PRIVATE_CONTENT_NOT_SAVED'}))+'\n');snapshot=await reader.read();assert.equal(snapshot.dialog.state,'confirmation');
+ now+=1000;await fs.appendFile(file,JSON.stringify(row('response_item',{type:'function_call_output',call_id:'approval'}))+'\n'+JSON.stringify(event('task_complete'))+'\n');snapshot=await reader.read();assert.equal(snapshot.dialog.state,'normal');
+ now+=1000;await fs.writeFile(path.join(directory,'new.jsonl'),JSON.stringify(row('event_msg',{type:'item_completed',item:{type:'Reasoning',raw_content:'PRIVATE_CONTENT_NOT_SAVED'}}))+'\n');await new Promise(resolve=>setTimeout(resolve,100));snapshot=await reader.read();assert.equal(snapshot.dialog.state,'running','New logs must be noticed without waiting for directory rescan');
+ assert(!JSON.stringify(snapshot).includes('PRIVATE_CONTENT_NOT_SAVED'));assert(!JSON.stringify(snapshot).includes('sessions'));assert(!JSON.stringify(snapshot).includes('pending'));
+ const cache=await fs.readFile(cacheFile,'utf8');assert(!cache.includes('PRIVATE_CONTENT_NOT_SAVED'));assert(!cache.includes('"dialog"'));
+ now+=600001;assert.equal((await reader.read()).dialog.reason,'no_recent_signal');
+ console.log('Dialog-state checks passed: three states, blocking vs async questions, matching confirmation, terminal handling, stale/archived guards, EOF restart, native new-file watch and no message payload persistence');
+}finally{reader?.dispose();restarted?.dispose();await fs.rm(home,{recursive:true,force:true})}
