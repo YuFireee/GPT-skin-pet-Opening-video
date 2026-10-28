@@ -4,6 +4,8 @@ Windows 本地工具，整合界面主题、角色额度桌宠与启动动画。
 
 本次更新包含启动提速、异常退出后的端口恢复和桌宠隐藏窗口恢复。见 [更新记录](docs/CHANGELOG.md)；本机测试范围与限制见 [验证说明](docs/VERIFICATION.md)。
 
+**日常使用的是 Windows 原生窗口应用。** 完成素材准备和编译后，双击 `sakura-studio/启动樱色工坊.cmd` 或 `SakuraControl.exe` 打开控制窗口，系统托盘提供桌宠开关等操作。日常使用不需要打开 Edge，也不需要安装 Playwright。
+
 ## 让 GPT 帮你安装
 
 **复制本仓库链接 + 上传一张主题参考图 + 上传你自己的启动影片**，发送给能操作本地文件、使用终端并生成图片的 Windows GPT/Codex 桌面会话。
@@ -67,7 +69,7 @@ npm run audit:runtime
 npm test
 ```
 
-默认使用 Microsoft Edge；可用 SAKURA_TEST_BROWSER 指定其他 Chromium 系浏览器。原生实键测试只向自己的测试窗口发送 Esc。检查结果写入被忽略的 reports，具体通过项及焦点限制见 [验证记录](docs/VERIFICATION.md)。
+**以下浏览器要求仅适用于开发者自动化测试：** `npm test` 中的网页样式回归检查由 Playwright 调用 Microsoft Edge；测试人员可用 `SAKURA_TEST_BROWSER` 指定其他 Chromium 系浏览器。这与原生控制应用的启动和日常使用无关。原生实键测试只向自己的测试窗口发送 Esc。检查结果写入被忽略的 `reports`，具体通过项及焦点限制见 [验证记录](docs/VERIFICATION.md)。
 
 Python 3.11 或更新版本可执行 `python tools/export-source.py`，按 Git 文件列表导出不含媒体的公开源码ZIP。`python tools/package.py` 则制作含本地素材的 LOCAL-ONLY 运行包，请勿将它当作公开源码包上传；它不会为导入素材增加任何授权。
 
