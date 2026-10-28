@@ -10,14 +10,15 @@ materials/manifest.json 列出程序所需的117个文件槽位（含97张动画
 
 外部目录应包含 theme、pet 两个子目录，以及自己的 manifest.json。文件名可按清单保持不变；目标文件名是程序接口，不要求图片内容沿用原来的角色。
 
-- theme/sakura-calm-soft-portrait.png：PNG主题背景。
-- theme/sakura-opening.mp4：H.264/AAC启动视频；原本地视频为1344×768、约9.4秒。
+- theme/sakura-calm-soft-portrait.png：PNG 主题背景。
+- theme/sakura-opening.mp4：H.264 视频，存在音频时转为 AAC；原演示影片的尺寸和时长不是输入要求。
 - theme/sakura-opening.poster.png、sakura-opening.end.png：封面与末帧。
 - theme/launcher.ico：自己有权使用的图标。
 - pet/sakura-soft-bust.png：单个角色的透明背景桌宠贴图。
 - pet/gpt-dragon-niang-bust.png、upstream-preview.png：兼容元数据需要的图片，可放入自己的适当图片。
 - pet/press.wav、release.wav：WAV音效。
 - pet/quotes.json、quote-layouts.json：本地语录与布局数据。
+- 三组动画目录共97张帧图，常态/待确认各27帧、执行43帧；路径和时长文件按清单生成。
 - 其余文字文件为相应素材来源和许可说明；应如实描述自己的素材。
 
 通过新生成工具导入的影片，末帧只叠加通用四角花瓣，不叠加固定Logo路径。旧清单未声明 `openingOverlay: "petals-only"` 时仍保留原演示构图的流光模式；不要用该模式套任意影片。生成工具输出的静音WAV及通用英文台词不取自历史角色素材。

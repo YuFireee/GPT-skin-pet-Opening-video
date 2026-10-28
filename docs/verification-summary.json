@@ -1,201 +1,21 @@
 {
   "version": "0.9.6",
   "date": "2026-10-28",
-  "uploadScope": "public-code-only",
+  "distribution": "public-code-only",
   "mediaBundled": false,
-  "observedPetPrivateMB": 2555.3,
-  "unboundedLeakConfirmed": false,
-  "observedPetPaused": true,
-  "defaultApplicationRelaunched": false,
-  "shortFixture": {
-    "passed": true,
-    "seconds": 62,
-    "privateMB": [
-      221.2,
-      185.4,
-      186.9
-    ],
-    "managedMB": [
-      34.2,
-      39.4,
-      35.1
-    ],
-    "handles": [
-      1853,
-      1795,
-      1783
-    ],
-    "scope": "Isolated native WPF host with local test Node CLI; no real application launch or accessibility tree scan. A short soak does not prove absence of a long-term leak.",
-    "failedQuotaQueryDidNotAutoRetry": true
+  "compiledBinariesBundled": false,
+  "review": {
+    "cleanZipNativeBuild": true,
+    "powerShell51ParsedFiles": 52,
+    "javascriptSyntaxFiles": 53,
+    "relativeImports": 74,
+    "markdownLinks": true,
+    "utf8Encoding": true,
+    "chinesePowerShellBom": true,
+    "testReportVersionFromPackage": true,
+    "privateStateExcluded": true
   },
-  "renderer": {
-    "passed": true,
-    "cycles": 60,
-    "before": {
-      "documents": 1,
-      "nodes": 9,
-      "jsEventListeners": 26
-    },
-    "after": {
-      "documents": 1,
-      "nodes": 9,
-      "jsEventListeners": 26
-    },
-    "checks": [
-      "Background effects pause and hide; foreground resumes without reapplying the image",
-      "Sunlight surface bounded to viewport dimensions",
-      "Theme restore removes focus listeners, DOM markers, pending callbacks and effects",
-      "DOM count remains bounded after repeated apply/restore and GC"
-    ],
-    "scope": "Isolated small-image browser fixture; not a guarantee about GPU drivers or long running production chats"
-  },
-  "inspectionLimits": {
-    "passed": true,
-    "concurrentRequests": 40,
-    "initialProbes": 1,
-    "checks": [
-      "Concurrent status requests do not spawn a process per request",
-      "Unavailable application stops automatic monitoring",
-      "Invalid opening executable stops readiness polling; no UI or default application is invoked"
-    ]
-  },
-  "drawAllocation": [
-    {
-      "name": "BeforeLoadingLoop",
-      "frames": 120,
-      "millisecondsPerFrame": 2.641,
-      "allocatedBytesPerFrame": 919319,
-      "retainedBytesAfterGc": 824
-    },
-    {
-      "name": "LoadingLoop",
-      "frames": 120,
-      "millisecondsPerFrame": 0.095,
-      "allocatedBytesPerFrame": 137350,
-      "retainedBytesAfterGc": 168
-    }
-  ],
-  "longTermBackgroundResume": "not revalidated",
-  "physicalEscapeTest": "earlier run blocked by Windows focus restrictions",
-  "nativeActivity": {
-    "foreground": "Animate while native managed window or its owned dialog is foreground; ignore document blur",
-    "background": "Cancel animations, detach and clear decorative DOM; preserve wallpaper",
-    "pollSeconds": 2.5,
-    "fixtureCycles": 60,
-    "domNodesBeforeAfter": [
-      9,
-      9
-    ],
-    "listenersBeforeAfter": [
-      26,
-      26
-    ],
-    "nativeLongSoakRetested": false,
-    "wallpaper": "Single static wallpaper; no duplicate scaled animated image"
-  },
-  "trayRelaunch": {
-    "mockedChecksPassed": true,
-    "realApplicationRelaunched": false,
-    "maxExitGraceSeconds": 3,
-    "maxLaunchCalls": 1
-  },
-  "roleAnimation": {
-    "state": "running",
-    "pose": "yaw, pitch, roll, side holds and neutral return; static reused arm",
-    "projection": "image-driven 2.5D ellipsoid, not redrawn side views",
-    "frames": 43,
-    "loopMs": 4970,
-    "staticArm": true,
-    "bodyFixed": true,
-    "decodedBudgetMiB": 43,
-    "geometryPoses": 101,
-    "confirmationAsset": "paired inward-facing V signs beside own cheeks",
-    "scope": "latest active local log, not selected UI conversation",
-    "stateFrames": {
-      "normal": 27,
-      "running": 43,
-      "confirmation": 27
-    },
-    "confirmationReady": true,
-    "threeStateSnapshotAdapterPassed": true,
-    "staleFallbackPassed": true,
-    "hiddenFrames": 0,
-    "managedCycleMiB": [
-      9.5,
-      9.5
-    ],
-    "faceOverlapPixels": 0,
-    "chinOverlapPixels": 0,
-    "protectionScope": "eyes and central chin; fingertips may touch side cheeks"
-  },
-  "quotaInteraction": {
-    "position": "centered above character",
-    "left": "5 hour remaining",
-    "right": "weekly remaining",
-    "labels": "percentages only",
-    "ringClick": "quota card",
-    "characterClick": "quote, repeated clicks advance",
-    "missingWindows": "unknown, no fallback",
-    "wpfLayoutAndClicksPassed": true,
-    "refreshStressIterations": 4000,
-    "managedAfterWarmupMiB": 15.1,
-    "bubbleVisibility": "rings hidden until bubble closing animation completes",
-    "bubbleVisibilityChecksPassed": true
-  },
-  "nativeControl": {
-    "nativeToolkit": "WinForms, no browser/WebView",
-    "closedWindowDisposed": true,
-    "hiddenPolling": false,
-    "openCloseCycles": 12,
-    "shortPrivateMiB": 40.6,
-    "idleSampleSeconds": 1.3,
-    "idleCpuMilliseconds": 0,
-    "scope": "Isolated own window and fake local service; excludes Node, pet and real application. Not a long-term performance claim.",
-    "installedWindowVisible": true,
-    "installedSingleTrayInstance": true,
-    "installedPrivateMiBOneSample": 29.2
-  },
-  "petVariants": [
-    "sakura-calm-soft-portrait"
-  ],
-  "staticControlPreview": {
-    "thumbnailPixels": [
-      480,
-      270
-    ],
-    "thumbnailBytes": 30637,
-    "normal": {
-      "passed": true,
-      "previewLoaded": true,
-      "previewFileUnlocked": true,
-      "cycleManagedGrowth": 51160,
-      "cycleGdiGrowth": -1,
-      "closedWindowReleased": true,
-      "hiddenPolling": false,
-      "idleCpuMilliseconds": 0,
-      "managedBefore": 681848,
-      "managedAfter": 671232,
-      "privateBytes": 42192896,
-      "scope": "Isolated fake local service and own native control window; 30 window open/close cycles, preview file unlocking and disposal, two pet actions, no real application or account CLI launched. Short idle sample is not long-term performance proof.",
-      "requestCount": 39
-    },
-    "missing": {
-      "passed": true,
-      "previewLoaded": false,
-      "previewFileUnlocked": true,
-      "cycleManagedGrowth": 50976,
-      "cycleGdiGrowth": -1,
-      "closedWindowReleased": true,
-      "hiddenPolling": false,
-      "idleCpuMilliseconds": 0,
-      "managedBefore": 681072,
-      "managedAfter": 670456,
-      "privateBytes": 42160128,
-      "scope": "Isolated fake local service and own native control window; 30 window open/close cycles, preview file unlocking and disposal, two pet actions, no real application or account CLI launched. Short idle sample is not long-term performance proof.",
-      "requestCount": 39
-    }
-  },
-  "userMaterialWorkflow": {
+  "materialPipeline": {
     "existingOutputProtected": true,
     "differentInputCodecTranscoded": true,
     "originalResolutionPreserved": true,
@@ -211,47 +31,22 @@
     "runtimeAudit": true,
     "materialFiles": 117,
     "genericOpeningInstalled": true,
-    "genericOpeningRendered": true,
-    "aiImagesGeneratedDuringThisCheck": false,
-    "aiImageRequirement": "Installer session must provide image generation, or user supplies six plates; model access is not bundled.",
-    "nativeControlWithGeneratedMaterials": {
-      "passed": true,
-      "previewLoaded": true,
-      "previewFileUnlocked": true,
-      "cycleManagedGrowth": 51160,
-      "cycleGdiGrowth": -1,
-      "closedWindowReleased": true,
-      "hiddenPolling": false,
-      "idleCpuMilliseconds": 0,
-      "managedBefore": 684768,
-      "managedAfter": 674152,
-      "privateBytes": 42135552,
-      "scope": "Isolated fake local service and own native control window; 30 window open/close cycles, preview file unlocking and disposal, two pet actions, no real application or account CLI launched. Short idle sample is not long-term performance proof.",
-      "requestCount": 39
-    }
+    "genericOpeningRendered": true
   },
-  "startupWindowGrace": {
+  "nativeControl": {
     "passed": true,
-    "deadlineMilliseconds": 25000,
-    "launcherWaitSeconds": 30,
-    "occludedWindowAcceptedOnlyWhenThemedAndOwned": true,
-    "failedAutomaticMonitoringStillStops": true
-  },
-  "orphanedDebugPort": {
-    "passed": true,
-    "maxRecoveryAttempts": 1,
-    "persistentPort": true,
-    "foreignOwnersRejected": true,
-    "customCdpPortValidated": true,
-    "scope": "Mock bridge and own loopback fixtures; no real app launched during automated tests."
-  },
-  "petVisibilityRecovery": {
-    "passed": true,
-    "hiddenHostReplacement": true,
-    "probeThrottleMilliseconds": 1000,
-    "noUnchangedReceiptWrites": true,
-    "idlePlayerHiddenFrameCount": 0,
-    "scope": "Host selection/receipt fixtures, real HWND helper compilation, isolated WPF frame release and native control fixture. No real application or account CLI launched by tests."
+    "previewLoaded": true,
+    "previewFileUnlocked": true,
+    "cycleManagedGrowth": 51160,
+    "cycleGdiGrowth": -1,
+    "closedWindowReleased": true,
+    "hiddenPolling": false,
+    "idleCpuMilliseconds": 0,
+    "managedBefore": 685520,
+    "managedAfter": 674904,
+    "privateBytes": 42029056,
+    "scope": "Isolated fake local service and own native control window; 30 window open/close cycles, preview file unlocking and disposal, two pet actions, no real application or account CLI launched. Short idle sample is not long-term performance proof.",
+    "requestCount": 39
   },
   "startupPerformance": {
     "bridgeBeforeMs": 2871,
@@ -269,5 +64,6 @@
       "cmdletMilliseconds": 1713.02
     }
   },
-  "releaseVersion": "0.9.6"
+  "scope": "Clean ZIP build, static checks and isolated fixture tests. No AI image generation, production account query or real application launch. Full interactive npm test was not certified by this review.",
+  "historicalRecords": "history/verification-summary-legacy.json"
 }
